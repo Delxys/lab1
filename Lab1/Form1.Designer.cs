@@ -91,15 +91,15 @@
             // 
             // pbf
             // 
-            this.pbf.Location = new System.Drawing.Point(105, 188);
+            this.pbf.Location = new System.Drawing.Point(147, 174);
             this.pbf.Name = "pbf";
-            this.pbf.Size = new System.Drawing.Size(246, 202);
+            this.pbf.Size = new System.Drawing.Size(243, 337);
             this.pbf.TabIndex = 6;
             this.pbf.TabStop = false;
             // 
             // btf
             // 
-            this.btf.Location = new System.Drawing.Point(12, 272);
+            this.btf.Location = new System.Drawing.Point(44, 174);
             this.btf.Name = "btf";
             this.btf.Size = new System.Drawing.Size(75, 23);
             this.btf.TabIndex = 7;
@@ -111,7 +111,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 402);
+            this.ClientSize = new System.Drawing.Size(567, 552);
             this.Controls.Add(this.btf);
             this.Controls.Add(this.pbf);
             this.Controls.Add(this.lbl);
@@ -136,8 +136,8 @@
         private System.Windows.Forms.TextBox tbs;
         private System.Windows.Forms.TextBox tbn;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.PictureBox pbf;
         private System.Windows.Forms.Button btf;
+        protected internal System.Windows.Forms.PictureBox pbf;
     }
 }
 
