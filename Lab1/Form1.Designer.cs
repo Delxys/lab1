@@ -34,6 +34,9 @@
             this.tbs = new System.Windows.Forms.TextBox();
             this.tbn = new System.Windows.Forms.TextBox();
             this.lbl = new System.Windows.Forms.Label();
+            this.pbf = new System.Windows.Forms.PictureBox();
+            this.btf = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbf)).BeginInit();
             this.SuspendLayout();
             // 
             // btt
@@ -86,11 +89,31 @@
             this.lbl.TabIndex = 5;
             this.lbl.Text = "Число точек N";
             // 
+            // pbf
+            // 
+            this.pbf.Location = new System.Drawing.Point(105, 188);
+            this.pbf.Name = "pbf";
+            this.pbf.Size = new System.Drawing.Size(246, 202);
+            this.pbf.TabIndex = 6;
+            this.pbf.TabStop = false;
+            // 
+            // btf
+            // 
+            this.btf.Location = new System.Drawing.Point(12, 272);
+            this.btf.Name = "btf";
+            this.btf.Size = new System.Drawing.Size(75, 23);
+            this.btf.TabIndex = 7;
+            this.btf.Text = "Жабстер";
+            this.btf.UseVisualStyleBackColor = true;
+            this.btf.Click += new System.EventHandler(this.btf_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 204);
+            this.ClientSize = new System.Drawing.Size(439, 402);
+            this.Controls.Add(this.btf);
+            this.Controls.Add(this.pbf);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.tbn);
             this.Controls.Add(this.tbs);
@@ -99,6 +122,7 @@
             this.Controls.Add(this.btt);
             this.Name = "Form1";
             this.Text = "Куприянов В.А. 3-46";
+            ((System.ComponentModel.ISupportInitialize)(this.pbf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +136,8 @@
         private System.Windows.Forms.TextBox tbs;
         private System.Windows.Forms.TextBox tbn;
         private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.PictureBox pbf;
+        private System.Windows.Forms.Button btf;
     }
 }
 
