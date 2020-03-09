@@ -82,9 +82,9 @@
             this.lbl.AutoSize = true;
             this.lbl.Location = new System.Drawing.Point(193, 22);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(78, 13);
+            this.lbl.Size = new System.Drawing.Size(81, 13);
             this.lbl.TabIndex = 5;
-            this.lbl.Text = "число точек N";
+            this.lbl.Text = "Число точек N";
             // 
             // Form1
             // 
