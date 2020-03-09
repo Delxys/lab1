@@ -8,12 +8,10 @@ namespace Lab1
 {
     class Trap : Abs
     {
-        private double left;
-        private double right;
+        private double left = 1;
+        private double right = 100000;
         public Trap(double left, double right):base(left,right)
         {
-            this.left = 1;
-            this.right = 100000;
         }
         public double Tr(int n)
         {
