@@ -8,12 +8,11 @@ namespace Lab1
 {
     class Simpson : Abs
     {
-        private double left;
-        private double right;
+        private const double left = 1;
+        private const double right = 100000;
         public Simpson(double left, double right) : base(left, right)
         {
-            this.left = 1;
-            this.right = 100000;
+
         }
         public double Si(int n)
         {
