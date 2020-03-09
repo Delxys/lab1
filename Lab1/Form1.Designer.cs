@@ -54,6 +54,7 @@
             this.bts.TabIndex = 1;
             this.bts.Text = "Метод Симпсона";
             this.bts.UseVisualStyleBackColor = true;
+            this.bts.Click += new System.EventHandler(this.bts_Click);
             // 
             // tbt
             // 

@@ -24,5 +24,13 @@ namespace Lab1
             double integral = trapeze.Tr(n);
             tbt.Text = Convert.ToString(integral);
         }
+
+        private void bts_Click(object sender, EventArgs e)
+        {
+            Simpson simp = new Simpson(1, 100000);
+            int n = Convert.ToInt32(tbn.Text);
+            double integral = simp.Si(n);
+            tbs.Text = Convert.ToString(integral);
+        }
     }
 }
