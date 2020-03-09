@@ -32,5 +32,10 @@ namespace Lab1
             double integral = simp.Si(n);
             tbs.Text = Convert.ToString(integral);
         }
+
+        private void btf_Click(object sender, EventArgs e)
+        {
+            pbf.Image = Properties.Resources.Jabuz;
+        }
     }
 }
