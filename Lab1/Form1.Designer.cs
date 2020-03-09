@@ -32,6 +32,8 @@
             this.bts = new System.Windows.Forms.Button();
             this.tbt = new System.Windows.Forms.TextBox();
             this.tbs = new System.Windows.Forms.TextBox();
+            this.tbn = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btt
@@ -42,7 +44,7 @@
             this.btt.TabIndex = 0;
             this.btt.Text = "Метод трапеций";
             this.btt.UseVisualStyleBackColor = true;
-            this.btt.Click += new System.EventHandler(this.button1_Click);
+            this.btt.Click += new System.EventHandler(this.btt_Click);
             // 
             // bts
             // 
@@ -67,11 +69,29 @@
             this.tbs.Size = new System.Drawing.Size(100, 20);
             this.tbs.TabIndex = 3;
             // 
+            // tbn
+            // 
+            this.tbn.Location = new System.Drawing.Point(186, 38);
+            this.tbn.Name = "tbn";
+            this.tbn.Size = new System.Drawing.Size(100, 20);
+            this.tbn.TabIndex = 4;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(193, 22);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(78, 13);
+            this.lbl.TabIndex = 5;
+            this.lbl.Text = "число точек N";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.tbn);
             this.Controls.Add(this.tbs);
             this.Controls.Add(this.tbt);
             this.Controls.Add(this.bts);
@@ -89,6 +109,8 @@
         private System.Windows.Forms.Button bts;
         private System.Windows.Forms.TextBox tbt;
         private System.Windows.Forms.TextBox tbs;
+        private System.Windows.Forms.TextBox tbn;
+        private System.Windows.Forms.Label lbl;
     }
 }
 

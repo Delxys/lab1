@@ -17,9 +17,12 @@ namespace Lab1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btt_Click(object sender, EventArgs e)
         {
-
+            Trap trapeze = new Trap(1,100000);
+            int n = Convert.ToInt32(tbn.Text);
+            double integral = trapeze.Tr(n);
+            tbt.Text = Convert.ToString(integral);
         }
     }
 }

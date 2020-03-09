@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    abstract class abs
+    class Abs
     {
-        public abs() 
-        { }
-        public double a { get;}
-        public double b { get;}
-    }
+        public double A { get; set; }
+        public double B { get; set; }
 
+        public Abs(double a, double b)
+        {
+            A = a;
+            B = b;
+        }
+        public double Func(double x)
+        {
+            return (32 * x) - Math.Log(2 * x)-41;
+        }
+    }
 }
