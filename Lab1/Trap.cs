@@ -8,8 +8,8 @@ namespace Lab1
 {
     class Trap : Abs
     {
-        private double left = 1;
-        private double right = 100000;
+        private const double left = 1;
+        private const double right = 100000;
         public Trap(double left, double right):base(left,right)
         {
         }
