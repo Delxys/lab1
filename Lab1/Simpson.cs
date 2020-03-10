@@ -14,6 +14,10 @@ namespace Lab1
         {
 
         }
+        public override double Func(double x)
+        {
+            return (32 * x) - Math.Log(2 * x) - 41;
+        }
         public double Si(int n)
         {
             double res = 0;

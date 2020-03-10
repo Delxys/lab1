@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    class Abs
+    abstract class Abs
     {
         public double A { get; set; }
         public double B { get; set; }
@@ -16,9 +16,6 @@ namespace Lab1
             A = a;
             B = b;
         }
-        public double Func(double x)
-        {
-            return (32 * x) - Math.Log(2 * x)-41;
-        }
+        public abstract double Func(double x);
     }
 }

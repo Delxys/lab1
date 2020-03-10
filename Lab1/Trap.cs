@@ -13,6 +13,10 @@ namespace Lab1
         public Trap(double left, double right):base(left,right)
         {
         }
+        public override double Func(double x)
+        {
+            return (32 * x) - Math.Log(2 * x) - 41;
+        }
         public double Tr(int n)
         {
             double h = (right - left) / n;
