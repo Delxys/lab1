@@ -21,7 +21,7 @@ namespace Lab1
         {
             Trap trapeze = new Trap(1,100000);
             int n = Convert.ToInt32(tbn.Text);
-            double integral = trapeze.Tr(n);
+            double integral = trapeze.Count(n);
             tbt.Text = Convert.ToString(integral);
         }
 
@@ -29,7 +29,7 @@ namespace Lab1
         {
             Simpson simp = new Simpson(1, 100000);
             int n = Convert.ToInt32(tbn.Text);
-            double integral = simp.Si(n);
+            double integral = simp.Count(n);
             tbs.Text = Convert.ToString(integral);
         }
 
