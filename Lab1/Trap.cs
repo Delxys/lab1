@@ -9,13 +9,11 @@ namespace Lab1
     public class Trap : Abs
     {
         private const double left = 1;
-        private const double right = 100000;
-        public Trap(double left, double right):base(left,right)
-        {
-        }
-        
+        private const double right = 100;   
         public override double Count(int n)
-        {
+        { 
+            if (n < 0)
+                throw new ArgumentOutOfRangeException("error", "N должно быть > 0");
             double h = (right - left) / n;
             double res = 0;
 

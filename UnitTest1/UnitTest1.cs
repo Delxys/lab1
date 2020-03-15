@@ -12,17 +12,16 @@ namespace UnitTest1
         {
             //Arrange
             double a = 1;
-            double b = 100000;
-            //                159996000024
-            double true_res = 159991579534.684;
+            double b = 100;
+            double true_res = 155491.685;
             int n = 100000;
-            Trap trap1 = new Trap(a,b);
+            Trap trap1 = new Trap();
             double h = (b - a) / n;
             //Act
             Func<double, double> x = y => trap1.Count(n);
             //Assert
             double actual = x(n);
-            Assert.AreEqual(true_res, actual, 0.1);
+            Assert.AreEqual(true_res, actual, 100);
         }
     }
 }

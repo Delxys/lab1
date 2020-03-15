@@ -19,7 +19,7 @@ namespace Lab1
 
         private void btt_Click(object sender, EventArgs e)
         {
-            Trap trapeze = new Trap(1,100000);
+            Trap trapeze = new Trap();
             int n = Convert.ToInt32(tbn.Text);
             double integral = trapeze.Count(n);
             tbt.Text = Convert.ToString(integral);
@@ -27,7 +27,7 @@ namespace Lab1
 
         private void bts_Click(object sender, EventArgs e)
         {
-            Simpson simp = new Simpson(1, 100000);
+            Simpson simp = new Simpson();
             int n = Convert.ToInt32(tbn.Text);
             double integral = simp.Count(n);
             tbs.Text = Convert.ToString(integral);

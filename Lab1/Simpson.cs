@@ -9,14 +9,11 @@ namespace Lab1
     class Simpson : Abs
     {
         private const double left = 1;
-        private const double right = 100000;
-        public Simpson(double left, double right) : base(left, right)
-        {
-
-        }
-        
+        private const double right = 100;
         public override double Count(int n)
         {
+            if (n < 0)
+                throw new ArgumentOutOfRangeException("error", "N должно быть > 0");
             double res = 0;
             double h = (right - left) / n;
             for (int i = 0; i < n-1; i++)

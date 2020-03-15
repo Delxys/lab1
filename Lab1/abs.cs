@@ -8,13 +8,8 @@ namespace Lab1
 {
     public abstract class Abs
     {
-        public double A { get; set; }
-        public double B { get; set; }
-
-        public Abs(double a, double b)
+        public Abs()
         {
-            A = a;
-            B = b;
         }
         public double Func(double x)
         {
