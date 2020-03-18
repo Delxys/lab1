@@ -2,10 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lab1;
 
-namespace UnitTest1
+namespace TestIntegral_1to100
 {
     [TestClass]
-    public class UnitTest1
+    public class Integral_1to100
     {
         [TestMethod]
         public void TestMethod1()
@@ -13,15 +13,14 @@ namespace UnitTest1
             //Arrange
             double a = 1;
             double b = 100;
-            double true_res = 155491.685;
-            int n = 100000;
+            double true_res = 155494.861;
+            int n = 1000000;
             Trap trap1 = new Trap();
-            double h = (b - a) / n;
             //Act
-            Func<double, double> x = y => trap1.Count(n);
+            Func<double, double> x = y => trap1.Count(n, a, b);
             //Assert
-            double actual = x(n);
-            Assert.AreEqual(true_res, actual, 100);
+            double mycount = x(n);
+            Assert.AreEqual(true_res, mycount, 1);
         }
     }
 }

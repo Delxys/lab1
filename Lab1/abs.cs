@@ -15,6 +15,6 @@ namespace Lab1
         {
             return (32 * x) - Math.Log(2 * x) - 41;
         }
-        public abstract double Count(int n);
+        public abstract double Count(int n, double a, double b);
     }
 }
