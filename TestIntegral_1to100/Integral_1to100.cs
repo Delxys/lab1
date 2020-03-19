@@ -17,9 +17,8 @@ namespace TestIntegral_1to100
             int n = 1000000;
             Trap trap1 = new Trap();
             //Act
-            Func<double, double> x = y => trap1.Count(n, a, b);
+            double mycount = trap1.Count(n, a, b);
             //Assert
-            double mycount = x(n);
             Assert.AreEqual(true_res, mycount, 1);
         }
     }
