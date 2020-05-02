@@ -8,22 +8,16 @@ namespace Lab1
 {
     class Simpson : Abs
     {
-        private const double left = 1;
-        private const double right = 100000;
-        public Simpson(double left, double right) : base(left, right)
+        //private const double a = 1;
+        //private const double b = 100;
+        public override double Count(int n,double a, double b)
         {
-
-        }
-        public override double Func(double x)
-        {
-            return (32 * x) - Math.Log(2 * x) - 41;
-        }
-        public double Si(int n)
-        {
+            if (n < 0)
+                throw new ArgumentOutOfRangeException("error", "N должно быть > 0");
             double res = 0;
-            double h = (right - left) / n;
+            double h = (b - a) / n;
             for (int i = 0; i < n-1; i++)
-                res += (Func(left + h * i) + 4*Func(left + h * (i + 0.5)) + Func(left + h * (i + 1)))*h / 6;
+                res += (Func(a + h * i) + 4*Func(a + h * (i + 0.5)) + Func(a + h * (i + 1)))*h / 6;
             return res;
         }
     }

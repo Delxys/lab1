@@ -28,40 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btt = new System.Windows.Forms.Button();
-            this.bts = new System.Windows.Forms.Button();
+            this.Btt = new System.Windows.Forms.Button();
+            this.Bts = new System.Windows.Forms.Button();
             this.tbt = new System.Windows.Forms.TextBox();
             this.tbs = new System.Windows.Forms.TextBox();
             this.tbn = new System.Windows.Forms.TextBox();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblN = new System.Windows.Forms.Label();
             this.pbf = new System.Windows.Forms.PictureBox();
-            this.btf = new System.Windows.Forms.Button();
+            this.Btf = new System.Windows.Forms.Button();
+            this.tba = new System.Windows.Forms.TextBox();
+            this.tbb = new System.Windows.Forms.TextBox();
+            this.lblBorders = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbf)).BeginInit();
             this.SuspendLayout();
             // 
-            // btt
+            // Btt
             // 
-            this.btt.Location = new System.Drawing.Point(44, 83);
-            this.btt.Name = "btt";
-            this.btt.Size = new System.Drawing.Size(134, 23);
-            this.btt.TabIndex = 0;
-            this.btt.Text = "Метод трапеций";
-            this.btt.UseVisualStyleBackColor = true;
-            this.btt.Click += new System.EventHandler(this.btt_Click);
+            this.Btt.Location = new System.Drawing.Point(44, 99);
+            this.Btt.Name = "Btt";
+            this.Btt.Size = new System.Drawing.Size(134, 23);
+            this.Btt.TabIndex = 0;
+            this.Btt.Text = "Метод трапеций";
+            this.Btt.UseVisualStyleBackColor = true;
+            this.Btt.Click += new System.EventHandler(this.Btt_Click);
             // 
-            // bts
+            // Bts
             // 
-            this.bts.Location = new System.Drawing.Point(44, 137);
-            this.bts.Name = "bts";
-            this.bts.Size = new System.Drawing.Size(134, 23);
-            this.bts.TabIndex = 1;
-            this.bts.Text = "Метод Симпсона";
-            this.bts.UseVisualStyleBackColor = true;
-            this.bts.Click += new System.EventHandler(this.bts_Click);
+            this.Bts.Location = new System.Drawing.Point(44, 137);
+            this.Bts.Name = "Bts";
+            this.Bts.Size = new System.Drawing.Size(134, 23);
+            this.Bts.TabIndex = 1;
+            this.Bts.Text = "Метод Симпсона";
+            this.Bts.UseVisualStyleBackColor = true;
+            this.Bts.Click += new System.EventHandler(this.Bts_Click);
             // 
             // tbt
             // 
-            this.tbt.Location = new System.Drawing.Point(291, 83);
+            this.tbt.Location = new System.Drawing.Point(290, 99);
             this.tbt.Name = "tbt";
             this.tbt.Size = new System.Drawing.Size(100, 20);
             this.tbt.TabIndex = 2;
@@ -80,14 +83,14 @@
             this.tbn.Size = new System.Drawing.Size(100, 20);
             this.tbn.TabIndex = 4;
             // 
-            // lbl
+            // lblN
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(193, 22);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(81, 13);
-            this.lbl.TabIndex = 5;
-            this.lbl.Text = "Число точек N";
+            this.lblN.AutoSize = true;
+            this.lblN.Location = new System.Drawing.Point(99, 38);
+            this.lblN.Name = "lblN";
+            this.lblN.Size = new System.Drawing.Size(81, 13);
+            this.lblN.TabIndex = 5;
+            this.lblN.Text = "Число точек N";
             // 
             // pbf
             // 
@@ -97,29 +100,55 @@
             this.pbf.TabIndex = 6;
             this.pbf.TabStop = false;
             // 
-            // btf
+            // Btf
             // 
-            this.btf.Location = new System.Drawing.Point(44, 174);
-            this.btf.Name = "btf";
-            this.btf.Size = new System.Drawing.Size(75, 23);
-            this.btf.TabIndex = 7;
-            this.btf.Text = "Жабстер";
-            this.btf.UseVisualStyleBackColor = true;
-            this.btf.Click += new System.EventHandler(this.btf_Click);
+            this.Btf.Location = new System.Drawing.Point(44, 174);
+            this.Btf.Name = "Btf";
+            this.Btf.Size = new System.Drawing.Size(75, 23);
+            this.Btf.TabIndex = 7;
+            this.Btf.Text = "Жабстер";
+            this.Btf.UseVisualStyleBackColor = true;
+            this.Btf.Click += new System.EventHandler(this.Btf_Click);
+            // 
+            // tba
+            // 
+            this.tba.Location = new System.Drawing.Point(186, 65);
+            this.tba.Name = "tba";
+            this.tba.Size = new System.Drawing.Size(41, 20);
+            this.tba.TabIndex = 8;
+            // 
+            // tbb
+            // 
+            this.tbb.Location = new System.Drawing.Point(245, 65);
+            this.tbb.Name = "tbb";
+            this.tbb.Size = new System.Drawing.Size(41, 20);
+            this.tbb.TabIndex = 8;
+            // 
+            // lblBorders
+            // 
+            this.lblBorders.AutoSize = true;
+            this.lblBorders.Location = new System.Drawing.Point(41, 68);
+            this.lblBorders.Name = "lblBorders";
+            this.lblBorders.Size = new System.Drawing.Size(136, 13);
+            this.lblBorders.TabIndex = 9;
+            this.lblBorders.Text = "Границы интегрирования";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 552);
-            this.Controls.Add(this.btf);
+            this.Controls.Add(this.lblBorders);
+            this.Controls.Add(this.tbb);
+            this.Controls.Add(this.tba);
+            this.Controls.Add(this.Btf);
             this.Controls.Add(this.pbf);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.lblN);
             this.Controls.Add(this.tbn);
             this.Controls.Add(this.tbs);
             this.Controls.Add(this.tbt);
-            this.Controls.Add(this.bts);
-            this.Controls.Add(this.btt);
+            this.Controls.Add(this.Bts);
+            this.Controls.Add(this.Btt);
             this.Name = "Form1";
             this.Text = "Куприянов В.А. 3-46";
             ((System.ComponentModel.ISupportInitialize)(this.pbf)).EndInit();
@@ -130,14 +159,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btt;
-        private System.Windows.Forms.Button bts;
+        private System.Windows.Forms.Button Btt;
+        private System.Windows.Forms.Button Bts;
         private System.Windows.Forms.TextBox tbt;
         private System.Windows.Forms.TextBox tbs;
         private System.Windows.Forms.TextBox tbn;
-        private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.Button btf;
+        private System.Windows.Forms.Label lblN;
+        private System.Windows.Forms.Button Btf;
         protected internal System.Windows.Forms.PictureBox pbf;
+        private System.Windows.Forms.TextBox tba;
+        private System.Windows.Forms.TextBox tbb;
+        private System.Windows.Forms.Label lblBorders;
     }
 }
 

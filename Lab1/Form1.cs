@@ -17,23 +17,27 @@ namespace Lab1
             InitializeComponent();
         }
 
-        private void btt_Click(object sender, EventArgs e)
+        private void Btt_Click(object sender, EventArgs e)
         {
-            Trap trapeze = new Trap(1,100000);
+            Trap trapeze = new Trap();
             int n = Convert.ToInt32(tbn.Text);
-            double integral = trapeze.Tr(n);
+            double a = Convert.ToDouble(tba.Text);
+            double b = Convert.ToDouble(tbb.Text);
+            double integral = trapeze.Count(n,a,b);
             tbt.Text = Convert.ToString(integral);
         }
 
-        private void bts_Click(object sender, EventArgs e)
+        private void Bts_Click(object sender, EventArgs e)
         {
-            Simpson simp = new Simpson(1, 100000);
+            Simpson simp = new Simpson();
             int n = Convert.ToInt32(tbn.Text);
-            double integral = simp.Si(n);
+            double a = Convert.ToDouble(tba.Text);
+            double b = Convert.ToDouble(tbb.Text);
+            double integral = simp.Count(n, a, b);
             tbs.Text = Convert.ToString(integral);
         }
 
-        private void btf_Click(object sender, EventArgs e)
+        private void Btf_Click(object sender, EventArgs e)
         {
             pbf.Image = Properties.Resources.Jabuz;
         }
