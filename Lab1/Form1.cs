@@ -23,7 +23,10 @@ namespace Lab1
             int n = Convert.ToInt32(tbn.Text);
             double a = Convert.ToDouble(tba.Text);
             double b = Convert.ToDouble(tbb.Text);
-            double integral = trapeze.Count(n,a,b);
+            double integral = trapeze.Count(n,a,b,(x) =>
+            {
+                return (32 * x) - Math.Log(2 * x) - 41;
+            });
             tbt.Text = Convert.ToString(integral);
         }
 
@@ -33,7 +36,10 @@ namespace Lab1
             int n = Convert.ToInt32(tbn.Text);
             double a = Convert.ToDouble(tba.Text);
             double b = Convert.ToDouble(tbb.Text);
-            double integral = simp.Count(n, a, b);
+            double integral = simp.Count(n, a, b,(x) =>
+            {
+                return (32 * x) - Math.Log(2 * x) - 41;
+            });
             tbs.Text = Convert.ToString(integral);
         }
 

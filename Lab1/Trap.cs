@@ -9,7 +9,7 @@ namespace Lab1
     public class Trap : Abs
     {
         
-        public override double Count(int n, double a, double b)
+        public override double Count(int n, double a, double b, Func<double, double> newfunc)
         { 
             if (n < 0)
                 throw new ArgumentOutOfRangeException("Поле N", "N должно быть > 0");
@@ -20,10 +20,10 @@ namespace Lab1
 
             for (int i = 1; i < n - 1; i++)
             {
-                res += h * (Func(a + (h * i)));
+                res += h * (newfunc(a + (h * i)));
             }
 
-            res += (h * ((Func(a) + Func(b)) / 2));
+            res += (h * ((newfunc(a) + newfunc(b)) / 2));
 
             return res;
         }
