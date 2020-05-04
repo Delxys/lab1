@@ -2,22 +2,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lab1;
 
-namespace TestIntegral_1to100
+namespace Integral_1to100simp
 {
     [TestClass]
-    public class Integral_1to100
+    public class TestIntegral_1to100simp
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Integral_1to100simp()
         {
             //Arrange
             double a = 1;
             double b = 100;
             double true_res = 155494.861;
             int n = 1000000;
-            Trap trap1 = new Trap();
+            Simpson simp1 = new Simpson();
             //Act
-            double mycount = trap1.Count(n, a, b);
+            double mycount = simp1.Count(n, a, b, (x) =>
+            {
+                return (32 * x) - Math.Log(2 * x) - 41;
+            });
             //Assert
             Assert.AreEqual(true_res, mycount, 1);
         }

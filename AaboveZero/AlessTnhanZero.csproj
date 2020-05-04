@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37252E84-901D-4629-A5C4-E31457039BF3}</ProjectGuid>
+    <ProjectGuid>{69DB57A0-13D0-4A47-BF3E-1784D0037B97}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestIntegral_1to100</RootNamespace>
-    <AssemblyName>TestIntegral_1to100</AssemblyName>
+    <RootNamespace>AaboveZero</RootNamespace>
+    <AssemblyName>AaboveZero</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestIntegral_1to100trap.cs" />
+    <Compile Include="TestAlessThanZero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

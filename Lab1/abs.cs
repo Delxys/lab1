@@ -12,5 +12,6 @@ namespace Lab1
         {
         }
         public abstract double Count(int n, double a, double b, Func<double, double> myfunc);
+        public abstract double PCount(int n, int a, int b, Func<double, double> myfunc);
     }
 }

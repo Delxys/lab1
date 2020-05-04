@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69DB57A0-13D0-4A47-BF3E-1784D0037B97}</ProjectGuid>
+    <ProjectGuid>{3B821E73-AB65-4A10-BDC5-80D26AB12539}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AaboveZero</RootNamespace>
-    <AssemblyName>AaboveZero</AssemblyName>
+    <RootNamespace>Integral_1to100simp</RootNamespace>
+    <AssemblyName>Integral_1to100simp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AaboveZero.cs" />
+    <Compile Include="TestIntegral_1to100simp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
