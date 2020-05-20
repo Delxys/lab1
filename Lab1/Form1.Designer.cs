@@ -39,12 +39,14 @@
             this.tba = new System.Windows.Forms.TextBox();
             this.tbb = new System.Windows.Forms.TextBox();
             this.lblBorders = new System.Windows.Forms.Label();
-            this.bttp = new System.Windows.Forms.Button();
+            this.Bttp = new System.Windows.Forms.Button();
             this.Btsp = new System.Windows.Forms.Button();
             this.lblposl = new System.Windows.Forms.Label();
-            this.lbltposl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbltpar = new System.Windows.Forms.Label();
+            this.tbtpar = new System.Windows.Forms.TextBox();
+            this.tbtposl = new System.Windows.Forms.TextBox();
+            this.pgb = new System.Windows.Forms.ProgressBar();
+            this.btCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbf)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +102,7 @@
             // 
             // pbf
             // 
-            this.pbf.Location = new System.Drawing.Point(114, 279);
+            this.pbf.Location = new System.Drawing.Point(147, 306);
             this.pbf.Name = "pbf";
             this.pbf.Size = new System.Drawing.Size(243, 283);
             this.pbf.TabIndex = 6;
@@ -108,7 +110,7 @@
             // 
             // Btf
             // 
-            this.Btf.Location = new System.Drawing.Point(43, 241);
+            this.Btf.Location = new System.Drawing.Point(44, 291);
             this.Btf.Name = "Btf";
             this.Btf.Size = new System.Drawing.Size(75, 23);
             this.Btf.TabIndex = 7;
@@ -139,15 +141,15 @@
             this.lblBorders.TabIndex = 9;
             this.lblBorders.Text = "Границы интегрирования";
             // 
-            // bttp
+            // Bttp
             // 
-            this.bttp.Location = new System.Drawing.Point(43, 128);
-            this.bttp.Name = "bttp";
-            this.bttp.Size = new System.Drawing.Size(134, 34);
-            this.bttp.TabIndex = 0;
-            this.bttp.Text = "Метод трапеций параллельный";
-            this.bttp.UseVisualStyleBackColor = true;
-            this.bttp.Click += new System.EventHandler(this.Bttp_Click);
+            this.Bttp.Location = new System.Drawing.Point(43, 128);
+            this.Bttp.Name = "Bttp";
+            this.Bttp.Size = new System.Drawing.Size(134, 34);
+            this.Bttp.TabIndex = 0;
+            this.Bttp.Text = "Метод трапеций параллельный";
+            this.Bttp.UseVisualStyleBackColor = true;
+            this.Bttp.Click += new System.EventHandler(this.Bttp_Click);
             // 
             // Btsp
             // 
@@ -162,46 +164,61 @@
             // lblposl
             // 
             this.lblposl.AutoSize = true;
-            this.lblposl.Location = new System.Drawing.Point(287, 218);
+            this.lblposl.Location = new System.Drawing.Point(436, 72);
             this.lblposl.Name = "lblposl";
             this.lblposl.Size = new System.Drawing.Size(137, 13);
             this.lblposl.TabIndex = 10;
             this.lblposl.Text = "время последовательной";
             // 
-            // lbltposl
-            // 
-            this.lbltposl.AutoSize = true;
-            this.lbltposl.Location = new System.Drawing.Point(434, 218);
-            this.lbltposl.Name = "lbltposl";
-            this.lbltposl.Size = new System.Drawing.Size(10, 13);
-            this.lbltposl.TabIndex = 10;
-            this.lbltposl.Text = "-";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(287, 251);
+            this.label1.Location = new System.Drawing.Point(445, 120);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "время параллельной";
             // 
-            // lbltpar
+            // tbtpar
             // 
-            this.lbltpar.AutoSize = true;
-            this.lbltpar.Location = new System.Drawing.Point(434, 251);
-            this.lbltpar.Name = "lbltpar";
-            this.lbltpar.Size = new System.Drawing.Size(10, 13);
-            this.lbltpar.TabIndex = 10;
-            this.lbltpar.Text = "-";
+            this.tbtpar.Location = new System.Drawing.Point(448, 139);
+            this.tbtpar.Name = "tbtpar";
+            this.tbtpar.Size = new System.Drawing.Size(100, 20);
+            this.tbtpar.TabIndex = 11;
+            // 
+            // tbtposl
+            // 
+            this.tbtposl.Location = new System.Drawing.Point(448, 99);
+            this.tbtposl.Name = "tbtposl";
+            this.tbtposl.Size = new System.Drawing.Size(100, 20);
+            this.tbtposl.TabIndex = 11;
+            // 
+            // pgb
+            // 
+            this.pgb.Location = new System.Drawing.Point(130, 257);
+            this.pgb.Name = "pgb";
+            this.pgb.Size = new System.Drawing.Size(311, 23);
+            this.pgb.TabIndex = 12;
+            // 
+            // btCancel
+            // 
+            this.btCancel.Location = new System.Drawing.Point(199, 139);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 23);
+            this.btCancel.TabIndex = 13;
+            this.btCancel.Text = "Отмена";
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 574);
-            this.Controls.Add(this.lbltpar);
-            this.Controls.Add(this.lbltposl);
+            this.ClientSize = new System.Drawing.Size(585, 668);
+            this.Controls.Add(this.btCancel);
+            this.Controls.Add(this.pgb);
+            this.Controls.Add(this.tbtposl);
+            this.Controls.Add(this.tbtpar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblposl);
             this.Controls.Add(this.lblBorders);
@@ -215,7 +232,7 @@
             this.Controls.Add(this.tbt);
             this.Controls.Add(this.Btsp);
             this.Controls.Add(this.Bts);
-            this.Controls.Add(this.bttp);
+            this.Controls.Add(this.Bttp);
             this.Controls.Add(this.Btt);
             this.Name = "Form1";
             this.Text = "Куприянов В.А. 3-46";
@@ -238,12 +255,14 @@
         private System.Windows.Forms.TextBox tba;
         private System.Windows.Forms.TextBox tbb;
         private System.Windows.Forms.Label lblBorders;
-        private System.Windows.Forms.Button bttp;
+        private System.Windows.Forms.Button Bttp;
         private System.Windows.Forms.Button Btsp;
         private System.Windows.Forms.Label lblposl;
-        private System.Windows.Forms.Label lbltposl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbltpar;
+        private System.Windows.Forms.TextBox tbtpar;
+        private System.Windows.Forms.TextBox tbtposl;
+        private System.Windows.Forms.ProgressBar pgb;
+        private System.Windows.Forms.Button btCancel;
     }
 }
 
